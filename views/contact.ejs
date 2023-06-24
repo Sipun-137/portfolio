@@ -1,0 +1,93 @@
+<%- include('partials/contact') %>
+<div>
+  <h1 class="fontdesgn">CONTACT</h1>
+</div>
+<br><hr><br>
+
+<section>
+<section id="contact" style="color: rgb(255, 255, 255);">
+        <div class="container ">
+            <!-- Contact form-->
+            <div class=" rounded-4 py-5 px-4 px-md-5">
+              <form action="/thanks" method="post" class="needs-validation" novalidate> 
+                    <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6">
+                      <div class="">
+                        <label for="" class="form-label fontdesgn">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                        <div class="invalid-feedback">
+                          Please Enter a Name.
+                        </div>
+                      </div>
+                      <div class="padd">
+                        <label for="email" class="form-label fontdesgn">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid Email.
+                        </div>
+                      </div>
+                      
+                      <div class="">
+                        <label for="" class="form-label fontdesgn">Phone NO</label>
+                        <input type="tel" class="form-control" id="" name="phoneno" placeholder="Phone-No" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid Phone-No.
+                        </div>
+                      </div>
+                      
+                      <div class="">
+                        <label for="exampleFormControlTextarea1" class="form-label fontdesgn">Message</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3" placeholder="Message" required></textarea>
+                      <div class="invalid-feedback">
+                        Please provide a Messages.
+                      </div>
+                      </div>
+                      <div>
+                        <button class="btn fontdesgn" type="submit">SEND</button>
+                      </div>  
+                    </div>
+                    
+                  </div>
+                  <script>
+                    (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+                  </script>
+
+                  </form>
+            </div>
+        </div>
+          <%- include('partials/social') %>
+    </section>
+
+    <script>
+      $(document).ready(function() {
+          function disableBack() {
+              window.history.forward()
+          }
+          window.onload = disableBack();
+          window.onpageshow = function(e) {
+              if (e.persisted)
+                  disableBack();
+          }
+      });
+  </script>
+
+<%- include('partials/footer') %>
+
+

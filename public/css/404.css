@@ -1,0 +1,72 @@
+
+
+    @font-face {
+  font-family: MarsFont;
+  src: url("/font/MarsBold.ttf");
+}
+@font-face {
+  font-family: Marsthin;
+  src: url("/font/MarsThin.otf");
+}
+@font-face {
+  font-family: Neon;
+  src: url("/font/Neon.ttf");
+}
+@font-face {
+  font-family: navfont;
+  src: url("/font/Mars.ttf");
+}
+.neon {
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff,
+      0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+  }
+body {
+  color: #ffffff;
+    background-color: #000000;
+    text-align: center;
+    align-items: center;
+    margin: 5% 15%;
+
+  }
+  .t1{
+    color:blue;
+  }
+   .t2{
+    color:rgb(0, 204, 255);
+  }
+  
+  .fontdesgn{
+    font-size: 9em;
+    font-family:Neon;
+  }
+  .desgn1{
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+  }
+
+  .detail{
+    font-family: MarsFont;
+  }
+
+  .blink {
+    animation: blinker 1s infinite ;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+/* snow flake */
+
+  
+.btn {
+  font-family: MarsFont;
+  margin: 3%;
+  border-color: #fff;
+  color: rgb(50, 169, 255);
+}
+
